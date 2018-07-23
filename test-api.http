@@ -1,0 +1,18 @@
+GET http://localhost:8080/all
+
+###
+
+GET http://localhost:8080/allGuides?login=name
+
+###
+
+POST http://localhost:8080/registr
+Content-Type: application/json
+
+{
+  "email": "dikinp@mail.ru",
+  "login": "login",
+  "password": "password"
+}
+
+###

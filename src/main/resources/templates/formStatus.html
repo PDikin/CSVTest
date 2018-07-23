@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>Идентификатор юзера</th>
+            <th>Статус формы, на которой он остановился</th>
+        </tr>
+        <tr th:each ="formStat: ${formStatus.entrySet()}">
+            <td th:utext="${formStat.getKey()}">...</td>
+            <td th:utext="${formStat.getValue()}">...</td>
+        </tr>
+    </table>
+    <br>
+
+    <form method="LINK" action="/">
+        <input type="submit" value="Назад">
+    </form>
+</div>
+
+</body>
+</html>

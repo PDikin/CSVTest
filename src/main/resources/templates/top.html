@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>Имя формы</th>
+            <th>Количество использований</th>
+        </tr>
+        <tr th:each ="top : ${topFive.entrySet()}">
+            <td th:utext="${top.getKey()}">...</td>
+            <td th:utext="${top.getValue()}">...</td>
+        </tr>
+    </table>
+    <br>
+
+    <form method="LINK" action="/">
+        <input type="submit" value="Назад">
+    </form>
+</div>
+
+</body>
+</html>
